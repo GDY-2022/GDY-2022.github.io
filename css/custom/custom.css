@@ -1,0 +1,297 @@
+/* 动态背景 */
+
+/* #web_bg {  
+  background-color: #008cff;
+  background-image: radial-gradient(closest-side, rgb(67, 203, 255), rgba(235, 105, 78, 0)), radial-gradient(closest-side, rgb(151, 8, 204), rgba(243, 11, 164, 0)), radial-gradient(closest-side, rgb(94, 231, 223), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(180,144,202
+), rgba(170, 142, 245, 0));
+  background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+  background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+  background-repeat: no-repeat;
+  animation: 15s moiveAnimation infinite;
+}
+
+@keyframes moiveAnimation {
+  0%,
+  100% {
+      background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+      background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+  }
+  25% {
+      background-size: 120vw 120vh, 130vw 150vh, 130vw 120vh, 100vw 110vh;
+      background-position: -30vw -30vh, 40vw -10vh, 0vw 10vh, -10vw 20vh;
+  }
+  50% {
+      background-size: 130vw 130vh, 140vw 100vh, 100vw 150vh, 90vw 110vh;
+      background-position: 10vw -60vh, 20vw 10vh, 10vw 30vh, 10vw -20vh;
+  }
+  75% {
+      background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
+      background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
+  }
+}
+  */ 
+
+
+
+
+
+/*遮罩透明度*/
+  :root {
+  --mark-bg: rgba(0,0,0,0.1);
+}
+
+
+
+/*所有页面实现毛玻璃特效*/
+#aside-content{
+  background: rgba(255,255,255,0);
+}
+/* 个人资料卡 */
+#aside-content > .card-widget:first-child {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(30px);
+}
+/* 侧边栏除了个人资料卡 */
+#aside-content .card-widget {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(30px);
+}
+/* 文章 */
+.layout > div:first-child:not(.recent-posts) {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(30px);
+}
+/* 文章列表 */
+#recent-posts > .recent-post-item {
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(30px);
+}
+/*标题栏*/
+#page-header.nav-visible #nav {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(50px);
+}
+/*手机端毛玻璃优化*/
+#sidebar #sidebar-menus.open {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+}
+
+#sidebar #menu-mask {
+  background: rgba(255,255,255,0);
+}
+
+
+
+
+/* 更换博客字体样式 */
+@font-face {
+  font-family: 'tzy';
+  /* 字体名自定义即可 */
+  src: url('https://pan.gdy1025.eu.org/d/cdn/Coca-ColaCareFontKaiTi.woff2');
+  /* 字体文件路径 */
+  font-display: swap;
+}
+
+body,
+.gitcalendar {
+  font-family: tzy !important;
+}
+
+
+
+/* Aplayer日间模式调整 */
+/* 背景色 */
+.aplayer {
+  background: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.aplayer.aplayer-fixed .aplayer-lrc:after,
+.aplayer.aplayer-fixed .aplayer-lrc:before {
+  display: none;
+}
+
+.aplayer.aplayer.aplayer-fixed .aplayer-body {
+  background: rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+
+/* 滚动条 */
+.aplayer .aplayer-list ol::-webkit-scrollbar {
+  width: 5px;
+}
+
+.aplayer .aplayer-list ol::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: var(--theme-color) !important;
+}
+
+.aplayer .aplayer-list ol::-webkit-scrollbar-thumb:hover {
+  background-color: var(--theme-color) !important;
+}
+
+/* 圆角 */
+.aplayer.aplayer-fixed .aplayer-list {
+  border-radius: 6px 6px 0 0 !important;
+}
+
+.aplayer.aplayer-fixed .aplayer-miniswitcher {
+  border-radius: 0 6px 6px 0 !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  transition: 0.28s !important;
+  border-radius: 6px !important;
+}
+
+/* 选中与播放中歌曲激活颜色 */
+.aplayer .aplayer-list ol li:hover {
+  background: var(--theme-color) !important;
+}
+
+.aplayer .aplayer-list ol li.aplayer-list-light {
+  background: var(--theme-color) !important;
+}
+
+/* 歌词 */
+.aplayer-lrc p {
+  color: #ffffff !important;
+  text-shadow: #000000 1px 0 0, #000000 0 1px 0, #000000 -1px 0 0, #000000
+      0 -1px 0 !important;
+}
+
+/* Aplayer黑暗模式 */
+[data-theme="dark"] .aplayer {
+  background: rgba(22, 22, 22, 0.6) !important;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .aplayer.aplayer-fixed .aplayer-body {
+  background: rgba(22, 22, 22, 0.6) !important;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"]
+  .aplayer
+  .aplayer-info
+  .aplayer-controller
+  .aplayer-time
+  .aplayer-icon
+  path {
+  fill: #d4d4d4;
+}
+
+[data-theme="dark"] .aplayer .aplayer-list ol li:hover {
+  background: var(--theme-color) !important;
+}
+
+[data-theme="dark"] .aplayer .aplayer-list ol li.aplayer-list-light {
+  background: var(--theme-color) !important;
+}
+
+[data-theme="dark"] .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  color: #d4d4d4;
+}
+
+[data-theme="dark"] .aplayer .aplayer-list ol li .aplayer-list-index {
+  color: #d4d4d4;
+}
+
+[data-theme="dark"] .aplayer .aplayer-list ol li .aplayer-list-author {
+  color: #d4d4d4;
+}
+
+
+
+
+/* 黑暗模式背景 */
+[data-theme="dark"] #web_bg {
+  /* 背景图像的地址（url括号里）  */
+  background: url("https://pan.gdy1025.eu.org/d/cdn/pictures/dark.jpg");
+  /* 背景图像不重复 */
+  background-repeat: no-repeat;
+  /* 背景图像大小 */
+  background-size: cover;
+}
+
+
+
+
+/* 日间模式背景 */
+#web_bg {
+  /* 背景图像的地址（url括号里）  */
+  background: url("https://pan.gdy1025.eu.org/d/cdn/pictures/bg.jpg");
+  /* 背景图像不重复 */
+  background-repeat: no-repeat;
+  /* 背景图像大小 */
+  background-size: cover;
+}
+
+
+
+
+
+
+/* 
+#web_bg { 
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: -o-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: -ms-linear-gradient(
+    0deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(247, 149, 51, 0.1) 0,
+    rgba(243, 112, 85, 0.1) 15%,
+    rgba(239, 78, 123, 0.1) 30%,
+    rgba(161, 102, 171, 0.1) 44%,
+    rgba(80, 115, 184, 0.1) 58%,
+    rgba(16, 152, 173, 0.1) 72%,
+    rgba(7, 179, 155, 0.1) 86%,
+    rgba(109, 186, 130, 0.1) 100%
+  );
+}  */

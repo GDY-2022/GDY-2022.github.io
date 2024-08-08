@@ -1,0 +1,13 @@
+/* carter-one-regular */
+@font-face {
+    font-family: 'Carter One';
+    font-style: normal;
+    font-weight: regular;
+    src: url('//lib.baomitu.com/fonts/carter-one/carter-one-regular.eot'); /* IE9 Compat Modes */
+    src: local('Carter One'), local('CarterOne-Normal'),
+         url('//lib.baomitu.com/fonts/carter-one/carter-one-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('//lib.baomitu.com/fonts/carter-one/carter-one-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('//lib.baomitu.com/fonts/carter-one/carter-one-regular.woff') format('woff'), /* Modern Browsers */
+         url('//lib.baomitu.com/fonts/carter-one/carter-one-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('//lib.baomitu.com/fonts/carter-one/carter-one-regular.svg#CarterOne') format('svg'); /* Legacy iOS */
+  }

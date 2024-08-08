@@ -1,0 +1,41 @@
+/* 和背景图颜色保持一致，防止高斯模糊后差异较大 */
+#page-header {
+    background-color: #979797;
+  }
+  
+  .pl-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pl-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .pl-img::before{
+    content: " ";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .pl-visible {
+    opacity: 1;
+    
+  }
+  
+  .pl-blur {
+    /* 小图锯齿多，增加高斯模糊 */
+    filter: blur(10px);
+  }
