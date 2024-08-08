@@ -1,6 +1,6 @@
 /* 动态背景 */
-
-/* #web_bg {  
+/* 
+#web_bg {  
   background-color: #008cff;
   background-image: radial-gradient(closest-side, rgb(67, 203, 255), rgba(235, 105, 78, 0)), radial-gradient(closest-side, rgb(151, 8, 204), rgba(243, 11, 164, 0)), radial-gradient(closest-side, rgb(94, 231, 223), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(180,144,202
 ), rgba(170, 142, 245, 0));
@@ -28,8 +28,8 @@
       background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
       background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
   }
-}
-  */ 
+} 
+ */
 
 
 
@@ -43,29 +43,29 @@
 
 
 /*所有页面实现毛玻璃特效*/
-#aside-content{
+/* #aside-content{
   background: rgba(255,255,255,0);
-}
+} */
 /* 个人资料卡 */
-#aside-content > .card-widget:first-child {
+/* #aside-content > .card-widget:first-child {
   background: rgba(255,255,255,0.4);
   backdrop-filter: blur(30px);
-}
+} */
 /* 侧边栏除了个人资料卡 */
-#aside-content .card-widget {
+/* #aside-content .card-widget {
   background: rgba(255,255,255,0.4);
   backdrop-filter: blur(30px);
-}
+} */
 /* 文章 */
-.layout > div:first-child:not(.recent-posts) {
+ /* .layout > div:first-child:not(.recent-posts) {
   background: rgba(255,255,255,0.4);
   backdrop-filter: blur(30px);
-}
+}  */
 /* 文章列表 */
-#recent-posts > .recent-post-item {
+/* #recent-posts > .recent-post-item {
   background: rgba(255,255,255,0.4);
   backdrop-filter: blur(30px);
-}
+} */
 /*标题栏*/
 #page-header.nav-visible #nav {
   background: rgba(255,255,255,0.5);
@@ -88,7 +88,7 @@
 @font-face {
   font-family: 'tzy';
   /* 字体名自定义即可 */
-  src: url('https://pan.gdy1025.eu.org/d/cdn/Coca-ColaCareFontKaiTi.woff2');
+  src: url('https://gdy2008.eu.org/d/vps/Coca-ColaCareFontKaiTi.woff2');
   /* 字体文件路径 */
   font-display: swap;
 }
@@ -107,75 +107,61 @@ body,
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
   position: relative;
 }
-
 .aplayer.aplayer-fixed .aplayer-lrc:after,
 .aplayer.aplayer-fixed .aplayer-lrc:before {
   display: none;
 }
-
 .aplayer.aplayer.aplayer-fixed .aplayer-body {
   background: rgba(255, 255, 255, 0.6) !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
 }
-
 /* 滚动条 */
 .aplayer .aplayer-list ol::-webkit-scrollbar {
   width: 5px;
 }
-
 .aplayer .aplayer-list ol::-webkit-scrollbar-thumb {
   border-radius: 3px;
   background-color: var(--theme-color) !important;
 }
-
 .aplayer .aplayer-list ol::-webkit-scrollbar-thumb:hover {
   background-color: var(--theme-color) !important;
 }
-
 /* 圆角 */
 .aplayer.aplayer-fixed .aplayer-list {
   border-radius: 6px 6px 0 0 !important;
 }
-
 .aplayer.aplayer-fixed .aplayer-miniswitcher {
   border-radius: 0 6px 6px 0 !important;
 }
-
 .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
   transition: 0.28s !important;
   border-radius: 6px !important;
 }
-
 /* 选中与播放中歌曲激活颜色 */
 .aplayer .aplayer-list ol li:hover {
   background: var(--theme-color) !important;
 }
-
 .aplayer .aplayer-list ol li.aplayer-list-light {
   background: var(--theme-color) !important;
 }
-
 /* 歌词 */
 .aplayer-lrc p {
   color: #ffffff !important;
   text-shadow: #000000 1px 0 0, #000000 0 1px 0, #000000 -1px 0 0, #000000
       0 -1px 0 !important;
 }
-
 /* Aplayer黑暗模式 */
 [data-theme="dark"] .aplayer {
   background: rgba(22, 22, 22, 0.6) !important;
   color: rgb(255, 255, 255);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
 }
-
 [data-theme="dark"] .aplayer.aplayer-fixed .aplayer-body {
   background: rgba(22, 22, 22, 0.6) !important;
   color: rgb(255, 255, 255);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
 }
-
 [data-theme="dark"]
   .aplayer
   .aplayer-info
@@ -185,23 +171,18 @@ body,
   path {
   fill: #d4d4d4;
 }
-
 [data-theme="dark"] .aplayer .aplayer-list ol li:hover {
   background: var(--theme-color) !important;
 }
-
 [data-theme="dark"] .aplayer .aplayer-list ol li.aplayer-list-light {
   background: var(--theme-color) !important;
 }
-
 [data-theme="dark"] .aplayer .aplayer-info .aplayer-controller .aplayer-time {
   color: #d4d4d4;
 }
-
 [data-theme="dark"] .aplayer .aplayer-list ol li .aplayer-list-index {
   color: #d4d4d4;
 }
-
 [data-theme="dark"] .aplayer .aplayer-list ol li .aplayer-list-author {
   color: #d4d4d4;
 }
@@ -211,33 +192,114 @@ body,
 
 /* 黑暗模式背景 */
 [data-theme="dark"] #web_bg {
+  /* background-color: #000000; */
   /* 背景图像的地址（url括号里）  */
-  background: url("https://pan.gdy1025.eu.org/d/cdn/pictures/dark.jpg");
+  /* background: url("https://gdy2008.eu.org/d/OneDrive/pictures/dark.jpg"); */
   /* 背景图像不重复 */
-  background-repeat: no-repeat;
+   background-repeat: no-repeat;
   /* 背景图像大小 */
-  background-size: cover;
+   background-size: cover;
 }
 
 
 
 
 /* 日间模式背景 */
-#web_bg {
+ #web_bg {
+  background-color: #F0F8FF;
   /* 背景图像的地址（url括号里）  */
-  background: url("https://pan.gdy1025.eu.org/d/cdn/pictures/bg.jpg");
+  /* background: url("https://gdy2008.eu.org/d/OneDrive/pictures/bg.jpg"); */
   /* 背景图像不重复 */
-  background-repeat: no-repeat;
+   background-repeat: no-repeat;
   /* 背景图像大小 */
-  background-size: cover;
+   background-size: cover;
+}
+
+
+
+
+/* 波浪css */
+.main-hero-waves-area {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -11px;
+  z-index: 5;
+}
+.waves-area .waves-svg {
+  width: 100%;
+  height: 5rem;
+}
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  fill: #f7f9febd;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  fill: #f7f9fe82;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: #f7f9fe36;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: #F0F8FF;
+}
+
+
+/* 黑色模式背景 */
+
+[data-theme="dark"] .parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  fill: #18171dc8;
+}
+[data-theme="dark"] .parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  fill: #18171d80;
+}
+[data-theme="dark"] .parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: #18171d3e;
+}
+[data-theme="dark"] .parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: #18171d;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves-area .waves-svg {
+    height: 40px;
+    min-height: 40px;
+  }
 }
 
 
 
 
 
-
-/* 
 #web_bg { 
   background: -webkit-linear-gradient(
     0deg,
@@ -294,4 +356,4 @@ body,
     rgba(7, 179, 155, 0.1) 86%,
     rgba(109, 186, 130, 0.1) 100%
   );
-}  */
+} 
