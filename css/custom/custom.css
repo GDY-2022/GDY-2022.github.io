@@ -88,7 +88,7 @@
 @font-face {
   font-family: 'tzy';
   /* 字体名自定义即可 */
-  src: url('https://gdy2008.eu.org/d/vps/Coca-ColaCareFontKaiTi.woff2');
+  src: url('https://pan.gdy1025.eu.org/d/cdn/Coca-ColaCareFontKaiTi.woff2');
   /* 字体文件路径 */
   font-display: swap;
 }
@@ -299,7 +299,7 @@ body,
 
 
 
-
+/* 
 #web_bg { 
   background: -webkit-linear-gradient(
     0deg,
@@ -356,4 +356,4 @@ body,
     rgba(7, 179, 155, 0.1) 86%,
     rgba(109, 186, 130, 0.1) 100%
   );
-} 
+}  */
