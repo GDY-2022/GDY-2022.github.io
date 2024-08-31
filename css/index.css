@@ -3556,7 +3556,7 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header #post-info {
   position: absolute;
-  bottom: 30px;
+  bottom: 100px;
   padding: 0 8%;
   width: 100%;
 }
