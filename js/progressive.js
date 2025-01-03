@@ -64,9 +64,9 @@ class ProgressiveLoad {
   
   // 拓展参数
   const config = {
-    smallSrc: 'https://pan.gdy1025.eu.org/d/cdn/pictuers/img/top_min.jpg'
+    smallSrc: 'https://pan.gdy1025.eu.org/d/cdn/pictures/img/top_min.jpg'
     ,
-    largeSrc: 'https://pan.gdy1025.eu.org/d/cdn/pictuers/img/top.jpg',
+    largeSrc: 'https://pan.gdy1025.eu.org/d/cdn/pictures/img/top.jpg',
     enableRoutes: ['/'],
   };
   if (config.enableRoutes && config.enableRoutes.length > 0) {
