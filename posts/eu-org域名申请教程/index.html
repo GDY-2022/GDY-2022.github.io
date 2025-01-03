@@ -5,37 +5,129 @@
 <meta property="og:site_name" content="GDY&#39;S BLOG">
 <meta property="og:description" content="eu.org免费域名从1996年就有了，由此可见是非常非常早，计划是专门给无力承担费用的一些组织使用的，现在我们来申请一个。 注册地址：https:&#x2F;&#x2F;nic.eu.org&#x2F;arf&#x2F;en&#x2F;login&#x2F;?next&#x3D;&#x2F;arf&#x2F;en&#x2F; 点击：Register 然后成功后到邮箱（垃圾箱）找到邮件、激活，然后登录。 点击登录，然后点击：New domain 填写理想的完整域名例如：abcde.eu.org">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku7.png">
+<meta property="og:image" content="https://pan.gdy1025.eu.org/d/cdn/pictures/star.jpg">
 <meta property="article:published_time" content="2023-07-03T00:11:04.000Z">
 <meta property="article:modified_time" content="2024-08-08T07:25:58.955Z">
 <meta property="article:author" content="GDY">
 <meta property="article:tag" content="域名">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku7.png"><link rel="shortcut icon" href="https://pan.gdy1025.eu.org/d/cdn/pictures/favicon.jpg"><link rel="canonical" href="https://gedongyou.github.io/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<meta name="twitter:image" content="https://pan.gdy1025.eu.org/d/cdn/pictures/star.jpg"><link rel="shortcut icon" href="https://pan.gdy1025.eu.org/d/cdn/pictures/favicon.jpg"><link rel="canonical" href="https://gedongyou.github.io/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.2.2"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?5f529e50e5cbd0d97470b5f0e5193efe";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
 </script><link rel="stylesheet" href="/css/custom/title_font.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
   localSearch: undefined,
   translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: false
   },
-  runtime: '天',
+  runtime: '',
   dateSuffix: {
     just: '刚刚',
     min: '分钟前',
@@ -44,10 +136,10 @@
     month: '个月前'
   },
   copyright: undefined,
-  lightbox: 'fancybox',
+  lightbox: 'null',
   Snackbar: undefined,
   infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
     buttonText: '加载更多'
   },
   isPhotoFigcaption: false,
@@ -64,111 +156,17 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-08-08 15:25:58'
-}</script><script>(win=>{
-      win.saveToLocal = {
-        set: (key, value, ttl) => {
-          if (ttl === 0) return
-          const now = Date.now()
-          const expiry = now + ttl * 86400000
-          const item = {
-            value,
-            expiry
-          }
-          localStorage.setItem(key, JSON.stringify(item))
-        },
-      
-        get: key => {
-          const itemStr = localStorage.getItem(key)
-      
-          if (!itemStr) {
-            return undefined
-          }
-          const item = JSON.parse(itemStr)
-          const now = Date.now()
-      
-          if (now > item.expiry) {
-            localStorage.removeItem(key)
-            return undefined
-          }
-          return item.value
-        }
-      }
-    
-      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        script.onerror = reject
-        script.onload = script.onreadystatechange = function() {
-          const loadState = this.readyState
-          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-          script.onload = script.onreadystatechange = null
-          resolve()
-        }
-
-        Object.keys(attr).forEach(key => {
-          script.setAttribute(key, attr[key])
-        })
-
-        document.head.appendChild(script)
-      })
-    
-      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onerror = reject
-        link.onload = link.onreadystatechange = function() {
-          const loadState = this.readyState
-          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-          link.onload = link.onreadystatechange = null
-          resolve()
-        }
-        document.head.appendChild(link)
-      })
-    
-      win.activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-        if (t === 'dark') activateDarkMode()
-        else if (t === 'light') activateLightMode()
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-      const detectApple = () => {
-        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-          document.documentElement.classList.add('apple')
-        }
-      }
-      detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom/custom.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" herf="/css/custom/icon.css"><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/css/custom/custom.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" herf="/css/custom/icon.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="GDY'S BLOG" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
   restartOnPushState: false
 }
 
-document.addEventListener('pjax:send', () => {
+btf.addGlobalFn('pjaxSend', () => {
   Pace.restart()
-})
-</script><link rel="stylesheet" href="/css/custom/pace.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku7.png')"><nav id="nav"><span id="blog-info"><a href="/" title="GDY'S BLOG"><span class="site-name">GDY'S BLOG</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">eu.org域名申请教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-03T00:11:04.000Z" title="发表于 2023-07-03 08:11:04">2023-07-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-08T07:25:58.955Z" title="更新于 2024-08-08 15:25:58">2024-08-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="eu.org域名申请教程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>eu.org免费域名从1996年就有了，由此可见是非常非常早，计划是专门给无力承担费用的一些组织使用的，现在我们来申请一个。</p>
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="/css/custom/pace.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><div id="web_bg" style="background: F0F8FF;"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://pan.gdy1025.eu.org/d/cdn/pictures/star.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">GDY'S BLOG</span></a><a class="nav-page-title" href="/"><span class="site-name">eu.org域名申请教程</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">eu.org域名申请教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-03T00:11:04.000Z" title="发表于 2023-07-03 08:11:04">2023-07-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-08T07:25:58.955Z" title="更新于 2024-08-08 15:25:58">2024-08-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>eu.org免费域名从1996年就有了，由此可见是非常非常早，计划是专门给无力承担费用的一些组织使用的，现在我们来申请一个。</p>
 <p>注册地址：<a target="_blank" rel="noopener" href="https://nic.eu.org/arf/en/login/?next=/arf/en/">https://nic.eu.org/arf/en/login/?next=/arf/en/</a></p>
 <p>点击：Register</p>
 <p>然后成功后到邮箱（垃圾箱）找到邮件、激活，然后登录。</p>
@@ -180,35 +178,53 @@ document.addEventListener('pjax:send', () => {
 <p>如果有错误，请返回修改！</p>
 <p>域名审核1天——30天都有可能，所以慢慢等吧，经过我的测试，一个账号内最多可以申请4个免费域名。</p>
 <p>eu.org域名通过后是有邮件通知的，但是都在垃圾箱。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://gedongyou.github.io">GDY</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://gedongyou.github.io/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/">https://gedongyou.github.io/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://gedongyou.github.io" target="_blank">GDY'S BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku7.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku4.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">玩转console.log</div></div></a></div><div class="next-post pull-right"><a href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo的搭建</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-20</div><div class="title">hexo的搭建</div></div></a></div><div><a href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku4.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-27</div><div class="title">玩转console.log</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">GDY</div><div class="author-info__description">GDY'S BLOG</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/gedongyou"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/gedongyou" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:gedongyou@gmail.com" target="_blank" title="Email"><i class="fa-solid fa-envelope" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/1663873411" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://gedongyou.github.io/atom.xml" target="_blank" title="rss"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/%E5%AE%89%E8%A3%85-Dell-OMSA/" title="Debian安装Dell OMSA"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/YourName.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Debian安装Dell OMSA"/></a><div class="content"><a class="title" href="/posts/%E5%AE%89%E8%A3%85-Dell-OMSA/" title="Debian安装Dell OMSA">Debian安装Dell OMSA</a><time datetime="2025-01-03T11:43:06.000Z" title="发表于 2025-01-03 19:43:06">2025-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="玩转console.log"/></a><div class="content"><a class="title" href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log">玩转console.log</a><time datetime="2023-07-27T07:48:54.000Z" title="发表于 2023-07-27 15:48:54">2023-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/" title="eu.org域名申请教程"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku7.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="eu.org域名申请教程"/></a><div class="content"><a class="title" href="/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/" title="eu.org域名申请教程">eu.org域名申请教程</a><time datetime="2023-07-03T00:11:04.000Z" title="发表于 2023-07-03 08:11:04">2023-07-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo的搭建"/></a><div class="content"><a class="title" href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建">hexo的搭建</a><time datetime="2023-06-20T11:20:44.000Z" title="发表于 2023-06-20 19:20:44">2023-06-20</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://pan.gdy1025.eu.org/d/cdn/pictures/footer.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By GDY</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://gedongyou.github.io">GDY</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://gedongyou.github.io/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/">https://gedongyou.github.io/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://gedongyou.github.io" target="_blank">GDY'S BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post-share"><div class="social-share" data-image="https://pan.gdy1025.eu.org/d/cdn/pictures/star.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css" media="print" onload="this.media='all'"><script src="https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">玩转console.log</div></div><div class="info-2"><div class="info-item-1">console.logconsole.log() 方法向 Web 控制台输出一条信息，在传递给 console 的方法的时候使用下面的字符以期进行参数的替换。    格式占位符 作用    %s 字符串   %d 或 %i 整数   %f 浮点数   %o 可展开的DOM   %O 列出DOM的属性   %c 根据提供的css样式格式化字符串   而彩蛋的实现可以使用 %c 为打印内容定义样式，指令前的文本不会受到影响，但指令后的文本将会使用参数中声明的 CSS 样式。 console.log(&quot;控制台 %c小彩蛋&quot;, &quot;font-size: 20px; color: #fff; border-radius: 5px; padding: 10px 25px;background: linear-gradient(315deg, #cdb4db 0%, #ffafcc 50%, #a2d2ff 100%)&quot;);   图片彩蛋打印图片 ️ 的实现思路如下： 背景图像由于只能定义样式，所以 console 不支持 &lt;img&gt;...</div></div></div></a><a class="pagination-related" href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/footer.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">hexo的搭建</div></div><div class="info-2"><div class="info-item-1"># GitHub Pages 是什么？ What is GitHub Pages? - GitHub Help  GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，让我们可以在 GitHub 仓库里托管和发布自己的静态网站页面。 # Hexo 是什么？ 官网：hexo.io  Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。 # Hexo + GitHub 文章发布原理在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。  # 优点和不足优点：完全免费；静态站点，轻量快速；可按需求自由定制改造；托管在 GitHub，安全省心；迁移方便…… 不足：发文不便，依赖于本地环境；更适合个人博客使用；GitHub 在国内访问速度有点不快。 1. 准备# 注意事项 输入代码时，核对准确，最好切换成英文输入法； 将文中的 “用户名” 和 “邮箱”...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/footer.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-06-20</div><div class="info-item-2">hexo的搭建</div></div><div class="info-2"><div class="info-item-1"># GitHub Pages 是什么？ What is GitHub Pages? - GitHub Help  GitHub Pages 是由 GitHub 官方提供的一种免费的静态站点托管服务，让我们可以在 GitHub 仓库里托管和发布自己的静态网站页面。 # Hexo 是什么？ 官网：hexo.io  Hexo 是一个快速、简洁且高效的静态博客框架，它基于 Node.js 运行，可以将我们撰写的 Markdown 文档解析渲染成静态的 HTML 网页。 # Hexo + GitHub 文章发布原理在本地撰写 Markdown 格式文章后，通过 Hexo 解析文档，渲染生成具有主题样式的 HTML 静态网页，再推送到 GitHub 上完成博文的发布。  # 优点和不足优点：完全免费；静态站点，轻量快速；可按需求自由定制改造；托管在 GitHub，安全省心；迁移方便…… 不足：发文不便，依赖于本地环境；更适合个人博客使用；GitHub 在国内访问速度有点不快。 1. 准备# 注意事项 输入代码时，核对准确，最好切换成英文输入法； 将文中的 “用户名” 和 “邮箱”...</div></div></div></a><a class="pagination-related" href="/posts/%E5%AE%89%E8%A3%85-Dell-OMSA/" title="Debian安装Dell OMSA"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku4.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-03</div><div class="info-item-2">Debian安装Dell OMSA</div></div><div class="info-2"><div class="info-item-1">什么是OMSADELL OMSA的全称为Dell OpenManage Server Administrator，专注于解决系统部署、系统监控和系统变更管理问题。通过提供用户界面(GUI)和命令行界面(CLI)工具对本地和远程的服务器进行管理和监控。  OMSA是 IDRAC企业版的开源社区版，如果你已经有了IDRAC的企业授权，一般不需要安装OMSA。  Dell 使用 APT 软件包管理器为 Ubuntu 和 Debian 系统提供专用的 OMSA 存储库。与存储库的通信通过 https 进行，因此请确保先安装以下包：sudo apt-get install ca-certificates apt-transport-https  然后添加 Dell 存储库：sudo echo &quot;deb http://linux.dell.com/repo/community/ubuntu xenial openmanage/840&quot; &gt; /etc/apt/sources.list.d/linux.dell.com.sources.list  要添加 Dell...</div></div></div></a><a class="pagination-related" href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log"><img class="cover" src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku3.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-27</div><div class="info-item-2">玩转console.log</div></div><div class="info-2"><div class="info-item-1">console.logconsole.log() 方法向 Web 控制台输出一条信息，在传递给 console 的方法的时候使用下面的字符以期进行参数的替换。    格式占位符 作用    %s 字符串   %d 或 %i 整数   %f 浮点数   %o 可展开的DOM   %O 列出DOM的属性   %c 根据提供的css样式格式化字符串   而彩蛋的实现可以使用 %c 为打印内容定义样式，指令前的文本不会受到影响，但指令后的文本将会使用参数中声明的 CSS 样式。 console.log(&quot;控制台 %c小彩蛋&quot;, &quot;font-size: 20px; color: #fff; border-radius: 5px; padding: 10px 25px;background: linear-gradient(315deg, #cdb4db 0%, #ffafcc 50%, #a2d2ff 100%)&quot;);   图片彩蛋打印图片 ️ 的实现思路如下： 背景图像由于只能定义样式，所以 console 不支持 &lt;img&gt;...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">GDY</div><div class="author-info-description">GDY'S BLOG</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/gedongyou"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/gedongyou" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:gedongyou@gmail.com" target="_blank" title="Email"><i class="fa-solid fa-envelope" style="color: #24292e;"></i></a><a class="social-icon" href="https://space.bilibili.com/1663873411" target="_blank" title="bilibili"><i class="fa-brands fa-bilibili" style="color: #24292e;"></i></a><a class="social-icon" href="https://gedongyou.github.io/atom.xml" target="_blank" title="rss"><i class="fas fa-rss" style="color: #24292e;"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/%E5%AE%89%E8%A3%85-Dell-OMSA/" title="Debian安装Dell OMSA"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Debian安装Dell OMSA"/></a><div class="content"><a class="title" href="/posts/%E5%AE%89%E8%A3%85-Dell-OMSA/" title="Debian安装Dell OMSA">Debian安装Dell OMSA</a><time datetime="2025-01-03T11:43:06.000Z" title="发表于 2025-01-03 19:43:06">2025-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/NekohaShizuku3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="玩转console.log"/></a><div class="content"><a class="title" href="/posts/%E7%8E%A9%E8%BD%ACconsole.log/" title="玩转console.log">玩转console.log</a><time datetime="2023-07-27T07:48:54.000Z" title="发表于 2023-07-27 15:48:54">2023-07-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/" title="eu.org域名申请教程"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/star.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="eu.org域名申请教程"/></a><div class="content"><a class="title" href="/posts/eu-org%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E6%95%99%E7%A8%8B/" title="eu.org域名申请教程">eu.org域名申请教程</a><time datetime="2023-07-03T00:11:04.000Z" title="发表于 2023-07-03 08:11:04">2023-07-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建"><img src="https://pan.gdy1025.eu.org/d/cdn/pictures/footer.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo的搭建"/></a><div class="content"><a class="title" href="/posts/hexo%E7%9A%84%E6%90%AD%E5%BB%BA/" title="hexo的搭建">hexo的搭建</a><time datetime="2023-06-20T11:20:44.000Z" title="发表于 2023-06-20 19:20:44">2023-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By GDY</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.2.2"></script><script src="/js/main.js?v=5.2.2"></script><div class="js-pjax"><script>(() => {
   let initFn = window.walineFn || null
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
 
-  const initWaline = (Fn) => {
-    const waline = Fn(Object.assign({
-      el: '#waline-wrap',
+  const destroyWaline = ele => ele.destroy()
+
+  const initWaline = (Fn, el = document, path = window.location.pathname) => {
+    const waline = Fn({
+      el: el.querySelector('#waline-wrap'),
       serverURL: 'https://waline.gdy2008.eu.org/',
       pageview: false,
       dark: 'html[data-theme="dark"]',
-      path: window.location.pathname,
       comment: false,
-    }, null))
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
 
-    const destroyWaline = () => {
-      waline.destroy()
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyWaline = () => {
+        destroyWaline(waline)
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
     }
-
-    btf.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
   }
 
-  const loadWaline = async () => {
-    if (initFn) initWaline(initFn)
+  const loadWaline = (el, path) => {
+    if (initFn) initWaline(initFn, el, path)
     else {
-      await getCSS('https://cdn.bootcdn.net/ajax/libs/waline/3.3.0/waline.min.css')
-      const { init } = await import('https://cdn.bootcdn.net/ajax/libs/waline/3.3.0/waline.min.js')
-      initFn = init || Waline.init
-      initWaline(initFn)
-      window.walineFn = initFn
+      btf.getCSS('https://cdn.bootcdn.net/ajax/libs/waline/3.3.0/waline.min.css')
+        .then(() => import('https://cdn.bootcdn.net/ajax/libs/waline/3.3.0/waline.min.js'))
+        .then(({ init }) => {
+          initFn = init || Waline.init
+          initWaline(initFn, el, path)
+          window.walineFn = initFn
+        })
     }
+  }
+
+  if (isShuoshuo) {
+    'Waline' === 'Waline'
+      ? window.shuoshuoComment = { loadComment: loadWaline } 
+      : window.loadOtherComment = loadWaline
+    return
   }
 
   if ('Waline' === 'Waline' || !true) {
@@ -217,74 +233,71 @@ document.addEventListener('pjax:send', () => {
   } else {
     window.loadOtherComment = loadWaline
   }
-})()</script></div><script defer src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/wow/1.1.2/wow.min.js"></script><script defer data-pjax src="/js/fadein.js"></script><script defer src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script><div class="aplayer no-destroy" data-id="7621982632" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-order="random" data-volume="0.3" data-mutex="true" data-listMaxHeight="36vh"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+})()</script></div><script defer src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/wow/1.1.2/wow.min.js"></script><script defer data-pjax src="/js/fadein.js"></script><script defer src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script><div class="aplayer no-destroy" data-id="7621982632" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-order="random" data-volume="0.3" data-mutex="true" data-listMaxHeight="36vh"> </div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = true;
 document.body.addEventListener('input', POWERMODE);
-</script><link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
-
-var pjax = new Pjax({
-  elements: 'a:not([target="_blank"])',
-  selectors: pjaxSelectors,
-  cacheBust: false,
-  analytics: false,
-  scrollRestoration: false
-})
-
-document.addEventListener('pjax:send', function () {
-
-  // removeEventListener
-  btf.removeGlobalFnEvent('pjax')
-  btf.removeGlobalFnEvent('themeChange')
-
-  document.getElementById('rightside').classList.remove('rightside-show')
-  
-  if (window.aplayers) {
-    for (let i = 0; i < window.aplayers.length; i++) {
-      if (!window.aplayers[i].options.fixed) {
-        window.aplayers[i].destroy()
+</script><link rel="stylesheet" href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
       }
     }
   }
 
-  typeof typed === 'object' && typed.destroy()
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
 
-  //reset readmode
-  const $bodyClassList = document.body.classList
-  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
-  typeof disqusjs === 'object' && disqusjs.destroy()
-})
-
-document.addEventListener('pjax:complete', function () {
-  window.refreshFn()
-
-  document.querySelectorAll('script[data-pjax]').forEach(item => {
-    const newScript = document.createElement('script')
-    const content = item.text || item.textContent || item.innerHTML || ""
-    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
-    newScript.appendChild(document.createTextNode(content))
-    item.parentNode.replaceChild(newScript, item)
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
   })
 
-  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
-
-  typeof panguInit === 'function' && panguInit()
-
-  // google analytics
-  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
-
-  // baidu analytics
-  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
-
-  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
-
-  // prismjs
-  typeof Prism === 'object' && Prism.highlightAll()
-})
-
-document.addEventListener('pjax:error', e => {
-  if (e.request.status === 404) {
-    pjax.loadUrl('/404.html')
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
   }
-})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
